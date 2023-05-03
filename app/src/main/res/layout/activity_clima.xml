@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/papi"
+    android:layout_height="match_parent"
+    android:background="@drawable/maxresdefault"
+    android:orientation="vertical"
+    tools:context=".ClimaActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/temperatura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="11grados alv "
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <TextView
+            android:text="clima"
+            android:id="@+id/clima"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/elevacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="14"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            />
+
+        <TextView
+            android:text="elevacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:text="11grados alv "
+        android:textColor="@color/white"
+        android:textSize="25sp">
+
+        <TextView
+            android:id="@+id/velocidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="13 Km/H "
+            android:textColor="@color/white"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:text="Velocidad del viento "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/direccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="204°  "
+            android:textColor="@color/white"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:text="Direccion del viento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:id="@+id/cerrar"
+            android:text="Cerrar "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
