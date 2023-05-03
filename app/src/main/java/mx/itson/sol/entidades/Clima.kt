@@ -2,7 +2,9 @@ package mx.itson.sol.entidades
 
 import com.google.gson.annotations.SerializedName
 
-
+/**
+ * Clase de entidad de tipo clima
+ */
 class Clima {
 
 

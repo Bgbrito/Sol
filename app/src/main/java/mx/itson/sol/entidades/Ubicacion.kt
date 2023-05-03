@@ -2,6 +2,9 @@ package mx.itson.sol.entidades
 
 import com.google.gson.annotations.SerializedName
 
+/**
+ * Clase de entidad de tipo ubicacion
+ */
 class Ubicacion {
 
     var latitude : Float? = null

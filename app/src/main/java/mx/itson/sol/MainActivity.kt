@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
         setContentView(R.layout.activity_main)
 
 
-
+// asigna que el Fragment sea de tipo mapa y asigna el mapa que se cargo en map ready
         val mapFragment = supportFragmentManager.findFragmentById(R.id.mapa) as SupportMapFragment
         mapFragment.getMapAsync(this)
     }
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
                     200
                 )
             }
-
+           //utilizar la ultima poscion del GPS para indicarlo en el mapa  y el locationChange es para actualizar la ubicacion en el mapa
             val locationManager = getSystemService(LOCATION_SERVICE) as LocationManager
             val location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
             if (location != null) {
@@ -71,6 +71,8 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
         }
     }
 
+
+    //de aqui hago llamar la api con retrofit
     private fun obtenerUbicacion(latitud : Double, longitud : Double ) {
         // ahora obtener ubicacion obtienen los parametros de lon y lat a tipo double
         val llamada: Call<Ubicacion> =
@@ -112,10 +114,12 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
         })
     }
 
+
+    //lo que hace esta funcion es agarra la lon y lat que proporciono el gps y asigna un marcador a dicha ubicacion
     override fun onLocationChanged(location: Location) {
         val latitud = location.latitude
         val longitud = location.longitude
-
+//se usa para concatenar que el marcador sepa la poscion si o si
         val latLng = LatLng(latitud, longitud)
         mapa?.clear()
 
@@ -135,7 +139,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
             override fun onMarkerDrag(marker: Marker) {
                 var a : Int = 1
                 }
-
+        //es para cuando se termina de arrastrar el marcador se termina esta funcion
             override fun onMarkerDragEnd(marker: Marker) {
                 //se obtienen el parametro de lat y long de poscion del marcador y se manda a llamar obtener ubicacion con esos parametros
                 val lat = marker.position.latitude
